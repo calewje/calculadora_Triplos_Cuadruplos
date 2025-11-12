@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 document.addEventListener('DOMContentLoaded', () => {
   const input = document.getElementById('operacionInput');
   const btn = document.getElementById('btnDesglosar');
+  const btn_Borrar = document.getElementById('btn_Borrar');
   const resultado = document.getElementById('resultado');
   const resul = document.getElementById('resul');
   const seleccion = document.getElementById('seleccion');
@@ -153,5 +154,21 @@ document.addEventListener('DOMContentLoaded', () => {
       resultado.classList.add('d-none');
       resul.classList.add('d-none');
     }
+
+    btn_Borrar.addEventListener('click', () => {
+    resultado.classList.add('d-none');
+    resul.classList.add('d-none');
+    resultado.textContent = '';
+    resul.textContent = '';
+    input.value = '';
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Limpio',
+        text: 'Se han borrado los resultados actuales.',
+        timer: 1500,
+        showConfirmButton: false,
+      });
+    });
   });
 });
