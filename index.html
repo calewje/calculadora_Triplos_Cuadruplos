@@ -1,39 +1,40 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicaciones Web Front End</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora Desglosada</title>
 </head>
 <body>
-    <div class="container">
-        <form class="row justify-content-center">
-            <div class="col-md-5">
-                <label for="nombre">Nombre</label>
-                <input id="nombre" class="form-control mb-3" type="text">
-                <label for="semestre">Semestr</label>
-                <select class="form-control mb-3" id="semestre">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                </select>
-                <label for="carrera">Carrera</label>
-                <input id="carrera" class="form-control mb-3" type="text">
-                <label for="horas">Horas</label>
-                <input id="horas" class="form-control mb-3" type="text">
-                <button type="button" id="btn_agregar" class="btn btn-primary w-100">Añadir</button>
-            </div>
-            <div class="col-md-5">
-                <p id="contenido" class="lead"></p>
-            </div>
-        </form>
-    </div>  
-    <script src="./controller/index.js"></script>  
+  <div class="container mt-5">
+    <h1 class="text-center"> Calculadora Desglosada</h1>
+      <div class="col-12">
+        <div class="card p-4 shadow mt-4">
+          <div class="mb-3">
+            <label for="operacionInput" class="form-label">Ingresa una operación</label>
+            <input type="text" class="form-control" id="operacionInput" placeholder="Ejemplo: 2*(3+4/2)" />
+          </div>
+  
+          <select id="seleccion" class="form-select form-select-sm mt-2 mb-4 " aria-label="Small select example">
+            <option selected>Selección</option>
+            <option value="triplo">Triplo</option>
+            <option value="cuadruplo">Cuadruplo</option>
+            <option value="ambos">Ambos</option>
+          </select>
+    
+          <button id="btnDesglosar" class="btn btn-primary w-100">Desglosar</button>
+    
+          <div id="resultado" class="alert alert-info mt-4 d-none" style="white-space: pre-wrap;"></div>
+          <div id="resul" class="alert alert-info mt-4 d-none" style="white-space: pre-wrap;"></div>
+
+          <ul id="historial" class="alert alert-info mt-4 d-none" style="white-space: pre-wrap; list-style:none; padding-left:0;"></ul>
+          <button id="btn_Borrar"  class="btn btn-danger mt-4 mb-2 w-100">Borrar</button>
+
+        </div>
+      </div>
+     
+  </div>
+
+  <script src="./bundle.js"></script>
 </body>
-</html> -->
+</html>
